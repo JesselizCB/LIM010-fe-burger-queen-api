@@ -25,6 +25,7 @@ module.exports.getOrdersById = async(req, resp, next) => {
 };
 
 module.exports.postOrders = async (req, resp, next) => {
+    try {
     if (!req.body.products || req.body.products.length === 0) {
         //no se indica `userId` o se intenta crear una orden sin productos
         return next(400);
@@ -53,6 +54,9 @@ module.exports.postOrders = async (req, resp, next) => {
     newOrder.products = allProducts;
     const orderStored = await newOrder.save();
     return resp.send(orderStored)
+} catch (error) {
+    console.error(error)
+}
 };
 
 module.exports.putOrders = async(req, resp, next) => {

@@ -26,9 +26,9 @@ beforeEach(async() => {
 const requestOfPostProduct = {
     headers: '',
     body: {
-        name: 'productToOrder',
-        price: '10',
-        type: 'breakfast',
+        name: 'cafe con leche',
+        price: '3',
+        type: 'desayuno',
     }
 };
 const requestOfPostOrders = {
