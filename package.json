@@ -1,69 +1,70 @@
 {
-    "name": "burger-queen-api",
-    "version": "1.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "engines": {
-      "node": ">=10"
+  "name": "burger-queen-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "nodemonConfig": {
+    "events": {
+      "restart": "kill-port 8080",
+      "crash": "kill-port 8080"
     },
-    "jest": {
-      "verbose": true
-    },
-    "nodemonConfig": {
-      "events": {
-        "restart": "kill-port 8080",
-        "crash": "kill-port 8080"
-      },
-      "delay": "1500"
-    },
-    "scripts": {
-      "pretest": "eslint .",
-      "start": "node index.js",
-      "test:e2e": "jest --verbose --testPathPattern e2e --globalSetup ./e2e/globalSetup --globalTeardown ./e2e/globalTeardown --runInBand",
-      "test:unit": "jest --coverage --verbose --testPathPattern unit",
-      "test": "npm run test:e2e && npm run test:unit",
-      "lint": "eslint .",
-      "docs:generate": "jsdoc -c jsdoc.conf --readme README-docs.md",
-      "docs:deploy": "rm -rf docs && npm run docs:generate && gh-pages -d docs",
-      "dev": "nodemon index.js"
-    },
-    "dependencies": {
-      "bcrypt": "^3.0.6",
-      "body-parser": "^1.19.0",
-      "cors": "^2.8.5",
-      "eslint": "^6.5.1",
-      "express": "^4.17.1",
-      "jscs": "^3.0.7",
-      "jsonwebtoken": "8.5.1",
-      "mongodb": "^3.3.2",
-      "mongodb-memory-server": "^5.2.8",
-      "mongoose": "^5.7.4",
-      "nodeenv": "^2.0.1"
-    },
-    "devDependencies": {
-      "babel-eslint": "^10.0.3",
-      "docdash": "1.1.1",
-      "eslint": "^6.5.1",
-      "eslint-config-airbnb-base": "^14.0.0",
-      "eslint-plugin-import": "^2.18.2",
-      "eslint-plugin-react": "^7.16.0",
-      "gh-pages": "2.1.1",
-      "jest": "^24.9.0",
-      "jsdoc": "3.6.3",
-      "jsdoc-http-plugin": "0.3.1",
-      "node-fetch": "2.6.0",
-      "nodemon": "^1.19.3",
-      "tree-kill": "1.2.1"
-    },
-    "description": "## Índice",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/JesselizCB/LIM010-fe-burger-queen-api.git"
-    },
-    "keywords": [],
-    "author": "",
-    "bugs": {
-      "url": "https://github.com/JesselizCB/LIM010-fe-burger-queen-api/issues"
-    },
-    "homepage": "https://github.com/JesselizCB/LIM010-fe-burger-queen-api#readme"
-  }
+    "delay": "1500"
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "start": "node index.js",
+    "test:e2e": "jest --verbose --testPathPattern e2e --globalSetup ./e2e/globalSetup --globalTeardown ./e2e/globalTeardown --runInBand",
+    "test:unit": "jest --coverage --verbose --testPathPattern unit",
+    "test": "npm run test:e2e && npm run test:unit",
+    "lint": "eslint .",
+    "docs:generate": "jsdoc -c jsdoc.conf --readme README-docs.md",
+    "docs:deploy": "rm -rf docs && npm run docs:generate && gh-pages -d docs",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "docker": "^1.0.0",
+    "eslint": "^6.5.1",
+    "express": "^4.17.1",
+    "jscs": "^3.0.7",
+    "jsonwebtoken": "8.5.1",
+    "mongodb": "^3.3.2",
+    "mongodb-memory-server": "^5.2.8",
+    "mongoose": "^5.7.4",
+    "nodeenv": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "docdash": "1.1.1",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.16.0",
+    "gh-pages": "2.1.1",
+    "jest": "^24.9.0",
+    "jsdoc": "3.6.3",
+    "jsdoc-http-plugin": "0.3.1",
+    "node-fetch": "2.6.0",
+    "nodemon": "^1.19.3",
+    "tree-kill": "1.2.1"
+  },
+  "description": "## Índice",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesselizCB/LIM010-fe-burger-queen-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/JesselizCB/LIM010-fe-burger-queen-api/issues"
+  },
+  "homepage": "https://github.com/JesselizCB/LIM010-fe-burger-queen-api#readme"
+}
