@@ -21,7 +21,7 @@ services:
       - "8080" # nuestra app corre en el puerto 8080
     ports:
       - "81:8080" # mapeamos el puerto 8080 de nuestro contenedor al puerto 80 de nuestra maquina
-    command: "npm start"
+    command: "bash -c 'rm -rf node_modules && npm install && npm start'" # reinstalamos las dependencias y levantamos el servidor
     depends_on:
       - db
     networks:
